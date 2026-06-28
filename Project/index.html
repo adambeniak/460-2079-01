@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Adam Beniak | BEN0362</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: { 'blob': 'blob 7s infinite', 'cursor': 'cursor .75s step-end infinite' },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        cursor: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-green-600 tracking-tighter hover:scale-105 transition transform">
+                        &lt;BEN0362 /&gt;
+                    </a>
+                </div>
+                <div class="hidden md:flex flex-1 justify-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">Domů</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">O mně</a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">Projekty</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition focus:outline-none">
+                        <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-200 hover:text-green-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">Domů</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">O mně</a>
+                <a href="projects.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">Projekty</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative w-full overflow-hidden flex-grow flex items-center">
+        
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob dark:opacity-20 dark:bg-green-700 z-0"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 dark:opacity-20 dark:bg-blue-800 z-0"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 dark:opacity-20 dark:bg-purple-800 z-0"></div>
+
+        <main class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8">
+            
+            <div class="flex-1 text-center md:text-left w-full">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-green-600 uppercase bg-green-100 dark:bg-green-900/30 rounded-full">
+                    OSOBNÍ PORTFOLIO
+                </div>
+                
+                <div class="mb-6">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight mb-2">
+                        Ahoj, jmenuji se
+                    </h2>
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 pb-2 break-words">
+                        Adam Beniak
+                    </h1>
+                </div>
+                
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 h-16 md:h-8 flex justify-center md:justify-start items-center">
+                    <span>Jsem&nbsp;</span>
+                    <span id="typewriter" class="font-bold text-gray-800 dark:text-gray-200"></span>
+                    <span class="animate-cursor text-green-500 font-bold">|</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full sm:w-auto">
+                    <a href="projects.html" class="px-8 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 shadow-lg hover:shadow-green-500/30 transition transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                        Zobrazit projekty
+                    </a>
+                    <a href="about.html" class="px-8 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 shadow hover:shadow-lg transition transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                        O mně
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex gap-8 justify-center md:justify-start text-gray-500 dark:text-gray-400">
+                    <a href="https://github.com/adambeniak" target="_blank" class="hover:text-gray-900 dark:hover:text-white transition text-3xl"><i class="fab fa-github"></i></a>
+                    <a href="https://cz.linkedin.com/in/adam-beniak" target="_blank" class="hover:text-blue-600 transition text-3xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:adam@adambeniak.cz" class="hover:text-green-500 transition text-3xl"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="hidden md:block flex-1 w-full max-w-lg relative mt-8 md:mt-0">
+                <div class="bg-gray-900 rounded-xl shadow-2xl border border-gray-700 overflow-hidden transform md:rotate-1 hover:rotate-0 transition duration-500">
+                    <div class="bg-gray-800 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-2 text-xs text-gray-400 font-mono truncate">main.c — adam@vscode</span>
+                    </div>
+                    <div class="p-6 font-mono text-sm text-gray-300 leading-relaxed overflow-x-auto">
+                        <p><span class="text-purple-400">#include</span> <span class="text-green-400">&lt;stdio.h&gt;</span></p>
+                        <br>
+                        <p><span class="text-blue-400">int</span> <span class="text-yellow-400">main</span>() {</p>
+                        <p class="pl-4"><span class="text-blue-400">char</span> name[] = <span class="text-green-400">"Adam"</span>;</p>
+                        <p class="pl-4"><span class="text-blue-400">int</span> semester = <span class="text-orange-400">1</span>;</p>
+                        <br>
+                        <p class="pl-4"><span class="text-gray-500">// TODO: Pass exams</span></p>
+                        <p class="pl-4 whitespace-nowrap">printf(<span class="text-green-400">"Hello World! Jsem %s."</span>, name);</p>
+                        <br>
+                        <p class="pl-4"><span class="text-purple-400">return</span> <span class="text-orange-400">0</span>;</p>
+                        <p>}</p>
+                        <br>
+                        <p class="animate-pulse text-green-500">➜  ~ <span class="inline-block w-2 h-4 bg-green-500 ml-1"></span></p>
+                    </div>
+                </div>
+                
+                <div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-xl border border-gray-100 dark:border-gray-700 animate-bounce delay-700">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-100 p-2 rounded-full text-green-600">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Status</p>
+                            <p class="font-bold text-sm">Open to Work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="text-center p-4 text-sm text-gray-500 border-t dark:border-gray-800 mt-auto">
+        &copy; 2025 Adam Beniak
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

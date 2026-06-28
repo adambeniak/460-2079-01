@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="cs" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mně | Adam Beniak | BEN0362</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { darkMode: 'class' } </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-green-600 tracking-tighter hover:scale-105 transition transform">&lt;BEN0362 /&gt;</a>
+                </div>
+                <div class="hidden md:flex flex-1 justify-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">Domů</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">O mně</a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">Projekty</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition focus:outline-none">
+                        <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-200 hover:text-green-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">Domů</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">O mně</a>
+                <a href="projects.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">Projekty</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto p-6 mt-6 md:mt-10 mb-20">
+        
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">O mně</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Student Informatiky na VŠB-TUO, vývojář a nadšenec do technologií z Bohumína.
+            </p>
+            <div class="flex justify-center gap-6 mt-6 text-gray-600 dark:text-gray-400 flex-wrap">
+                <a href="mailto:adam@adambeniak.cz" class="hover:text-green-600 transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> adam@adambeniak.cz
+                </a>
+                <span class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i> Bohumín
+                </span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="md:col-span-1 space-y-12">
+                
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-green-600"></i> Vzdělání
+                    </h2>
+                    
+                    <div class="relative border-l-2 border-gray-300 dark:border-gray-700 ml-3 pl-8 pb-8 space-y-8">
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-1 bg-green-600 w-5 h-5 rounded-full border-4 border-white dark:border-gray-900"></span>
+                            <h3 class="font-bold text-lg">VŠB – Technická univerzita Ostrava</h3>
+                            <p class="text-green-600 font-medium">Informatika (Bc.)</p>
+                            <p class="text-sm text-gray-500">2025 – současnost</p>
+                            <p class="text-sm mt-1">1. ročník bakalářského studia.</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-1 bg-gray-400 w-5 h-5 rounded-full border-4 border-white dark:border-gray-900"></span>
+                            <h3 class="font-bold text-lg">Gymnázium Františka Živného</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Bohumín</p>
+                            <p class="text-sm text-gray-500">2021 – 2025</p>
+                            <p class="text-sm mt-1">Ukončeno maturitou s vyznamenáním.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-globe text-green-600"></i> Jazyky & Kurzy
+                    </h2>
+                    <div class="space-y-4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Čeština</span>
+                                <span class="text-sm text-gray-500">Rodilý mluvčí</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Angličtina (B2)</span>
+                                <span class="text-sm text-gray-500">Státní zkouška</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Ruština</span>
+                                <span class="text-sm text-gray-500">Začátečník</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+                                <div class="bg-gray-400 h-2 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="md:col-span-2 space-y-12">
+                
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-briefcase text-green-600"></i> Pracovní zkušenosti
+                    </h2>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-l-4 border-green-600">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Hlavní táborový vedoucí</h3>
+                                <p class="text-green-600 font-medium">Horečky Ranč – Frenštát p. R.</p>
+                            </div>
+                            <span class="text-white text-sm mt-1 md:mt-0 bg-gray-600 dark:bg-gray-700 px-3 py-1 rounded-full h-fit w-fit">
+                                2021 – současnost
+                            </span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Organizace letních táborů a vedení týmu. Propojil jsem zde organizační schopnosti s IT dovednostmi při modernizaci táborové administrativy.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>Vytvoření systému přihlášek a automatizace procesů.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>Správa webových stránek organizace.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-500 mt-1"></i>
+                                <span>Vedení týmu a komunikace.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-code text-green-600"></i> Technické dovednosti
+                    </h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition group">
+                            <i class="devicon-c-plain text-4xl text-blue-600 mb-2 block group-hover:text-blue-500 transition"></i>
+                            <h4 class="font-bold">Jazyk C</h4>
+                            <p class="text-xs text-gray-500">Základní programování</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition group">
+                            <div class="flex justify-center gap-2 mb-2">
+                                <i class="devicon-html5-plain text-2xl text-orange-500"></i>
+                                <i class="devicon-css3-plain text-2xl text-blue-500"></i>
+                                <i class="devicon-javascript-plain text-2xl text-yellow-400"></i>
+                            </div>
+                            <h4 class="font-bold">Web Dev</h4>
+                            <p class="text-xs text-gray-500">HTML5, CSS3, JS</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition group">
+                            <i class="devicon-lua-plain text-4xl text-blue-400 mb-2 block group-hover:text-blue-300 transition"></i>
+                            <h4 class="font-bold">Lua</h4>
+                            <p class="text-xs text-gray-500">Herní skripty</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition group">
+                            <i class="devicon-csharp-plain text-4xl text-purple-600 mb-2 block group-hover:text-purple-500 transition"></i>
+                            <h4 class="font-bold">C# .NET</h4>
+                            <p class="text-xs text-gray-500">Windows Forms</p>
+                        </div>
+                        
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition">
+                            <i class="fab fa-wordpress text-4xl text-blue-600 mb-2"></i>
+                            <h4 class="font-bold">WordPress</h4>
+                            <p class="text-xs text-gray-500">Elementor & Admin</p>
+                        </div>
+
+                         <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition">
+                            <i class="fas fa-terminal text-4xl text-gray-600 mb-2"></i>
+                            <h4 class="font-bold">Dev Tools</h4>
+                            <p class="text-xs text-gray-500">VS Code, PuTTy, Git</p>
+                        </div>
+
+                         <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition">
+                            <i class="fas fa-database text-4xl text-orange-500 mb-2"></i>
+                            <h4 class="font-bold">Databáze</h4>
+                            <p class="text-xs text-gray-500">MySQL, phpMyAdmin</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition">
+                            <i class="fab fa-windows text-4xl text-blue-400 mb-2"></i>
+                            <h4 class="font-bold">IT Admin</h4>
+                            <p class="text-xs text-gray-500">Win 10/11, Office</p>
+                        </div>
+
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-center hover:scale-105 transition">
+                            <i class="fas fa-robot text-4xl text-green-500 mb-2"></i>
+                            <h4 class="font-bold">AI Tools</h4>
+                            <p class="text-xs text-gray-500">Prompting</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center p-4 text-sm text-gray-500 border-t dark:border-gray-800 mt-auto">
+        &copy; 2025 Adam Beniak
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

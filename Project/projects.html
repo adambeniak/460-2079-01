@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty | Adam Beniak | BEN0362</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { darkMode: 'class' } </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-green-600 tracking-tighter hover:scale-105 transition transform">&lt;BEN0362 /&gt;</a>
+                </div>
+                <div class="hidden md:flex flex-1 justify-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">Domů</a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">O mně</a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 font-medium transition">Projekty</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition focus:outline-none">
+                        <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-200 hover:text-green-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-700 absolute w-full left-0 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">Domů</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">O mně</a>
+                <a href="projects.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800">Projekty</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-6 mt-10 mb-20">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Moje projekty</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">
+                Ukázka prací z 1. semestru studia Informatiky na VŠB-TUO.
+            </p>
+        </header>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <article class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition group flex flex-col h-full">
+                <div class="h-48 bg-amber-100 dark:bg-gray-700 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-amber-500/10 group-hover:bg-amber-500/20 transition"></div>
+                    <i class="fas fa-microchip text-6xl text-amber-600 dark:text-amber-400 group-hover:scale-110 transition duration-300"></i>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold tracking-wider text-amber-600 dark:text-amber-400 uppercase mb-2 block">ZDS • Hardware</span>
+                        <h3 class="text-xl font-bold mb-2">Realizace logických obvodů</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            Praktické zapojení digitálních systémů na nepájivém poli.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 mt-2 space-y-1">
+                            <li>Funkční zapojení předem známé Booleovy funkce.</li>
+                            <li>Návrh a realizace obvodu pro funkci zadanou přímo na cvičení.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">Boolean Algebra</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">Logická hradla</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition group flex flex-col h-full">
+                <div class="h-48 bg-blue-100 dark:bg-gray-700 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition"></div>
+                    <i class="fas fa-file-code text-6xl text-blue-600 dark:text-blue-400 group-hover:scale-110 transition duration-300"></i>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold tracking-wider text-blue-600 dark:text-blue-400 uppercase mb-2 block">ZDS • Data</span>
+                        <h3 class="text-xl font-bold mb-2">Kódování znaků & Unicode</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            Analýza a manuální konstrukce bitových reprezentací textu.
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 mt-2 space-y-1">
+                            <li>Práce s ASCII a Unicode standardy.</li>
+                            <li>Sestavení formátu UTF-8 do více bytů.</li>
+                            <li>Převod znaků do UTF-16 (surrogate pairs).</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">Binární soustavy</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">Hexadecimální</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition group flex flex-col h-full">
+                <div class="h-48 bg-green-100 dark:bg-gray-700 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-500/10 group-hover:bg-green-500/20 transition"></div>
+                    <i class="fas fa-laptop-code text-6xl text-green-600 dark:text-green-400 group-hover:scale-110 transition duration-300"></i>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold tracking-wider text-green-600 dark:text-green-400 uppercase mb-2 block">ZIT • Frontend</span>
+                        <h3 class="text-xl font-bold mb-2">Osobní studentské portfolio</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            Návrh a implementace responzivní webové prezentace (tato stránka).
+                        </p>
+                         <ul class="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 mt-2 space-y-1">
+                            <li>Využití moderních frameworků (Tailwind CSS).</li>
+                            <li>Interaktivní prvky pomocí JavaScriptu (Dark Mode).</li>
+                            <li>Responzivní design pro mobilní zařízení.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">HTML5</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">Tailwind</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">JS</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="text-center p-4 text-sm text-gray-500 border-t dark:border-gray-800 mt-auto">
+        &copy; 2025 Adam Beniak
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
